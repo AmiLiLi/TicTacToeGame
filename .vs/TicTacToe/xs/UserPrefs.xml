@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{CFCD39F3-0EE6-49FD-BD4C-9055621CC6B5}|Default">
+  <MonoDevelop.Ide.ItemProperties.TicTacToe.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.nexus_7" />
+  <MonoDevelop.Ide.ItemProperties.TicTacToe.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.768c1b3dfd5f3116feb27643faea0c4478cea785" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TicTacToe/View/GamePage.xaml">
+    <Files>
+      <File FileName="TicTacToe/View/GamePage.xaml" Line="10" Column="20" />
+      <File FileName="TicTacToe/View/MainPage.xaml.cs" Line="12" Column="9" />
+      <File FileName="TicTacToe/TriggerAction/ButtonTriggerAction.cs" Line="8" Column="25" />
+      <File FileName="TicTacToe/View/GamePage.xaml.cs" Line="7" Column="20" />
+      <File FileName="TicTacToe.Android/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="TicTacToe/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="TicTacToe/View/MainPage.xaml" Line="59" Column="15" />
+      <File FileName="TicTacToe/ViewModel/GamePageViewModel.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

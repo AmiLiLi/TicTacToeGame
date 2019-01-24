@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:TicTacToe" 
+             Title="TicTacToe"
+             BackgroundColor="White"
+             x:Class="TicTacToe.View.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="DeleteButton_Clicked"
+                     Icon="delete.png"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <Grid Padding="10"
+              RowSpacing="10"
+              Margin="20,20,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/> <!-- Logo -->
+                <RowDefinition Height="Auto"/> <!-- Progressbar -->
+                <RowDefinition Height="Auto"/> <!-- Label -->
+                <RowDefinition Height="*"/>    <!-- Play Button-->
+            </Grid.RowDefinitions>
+            
+            <Image Grid.Row="0"
+                   Margin="0,20,0,50"
+                   Source="Logo.png"
+                   WidthRequest="180"
+                   HeightRequest="180"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+            
+            <ProgressBar Grid.Row="1"
+                         Margin="50, 20, 50, 0"
+                         x:Name="ResultBar"
+                         WidthRequest="100"
+                         HeightRequest="30"/>
+            
+            <Label Grid.Row="2"
+                   Margin="10"
+                   x:Name="ResultLabel"
+                   TextColor="Fuchsia"
+                   FontSize="Medium"
+                   HorizontalOptions="Center"/>
+                   
+       
+            <Button Grid.Row="3"
+                    Margin="0,20,0,30"
+                    Text="Play"
+                    TextColor="White"
+                    FontSize="Large"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="50"
+                    BackgroundColor="Green"
+                    AutomationId="ResetGame"
+                    Clicked="PlayButton_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

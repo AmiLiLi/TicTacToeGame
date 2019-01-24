@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TicTacToe;assembly=TicTacToe"
+             x:Class="TicTacToe.View.GamePage"
+             BackgroundColor="White">
+
+    <ContentPage.Content>
+        <Grid Padding="10"
+              ColumnSpacing="10"
+              RowSpacing="5"
+              BackgroundColor="White"
+              VerticalOptions="Fill"
+              HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="5"/> <!--image line-->
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="5"/> <!--image line-->
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="Auto"/> <!--Current Player / Winner-->
+                <RowDefinition Height="Auto"/> <!--Reset Button-->
+                <RowDefinition Height="*"/> <!--Reset Button-->
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="90"/>
+            </Grid.ColumnDefinitions>
+            
+                        
+            <Button Grid.Row="0"
+                    Grid.ColumnSpan="5"
+                    Margin="0,20,0,0"
+                    Text="Done!"
+                    FontSize="Large"
+                    BackgroundColor="White"
+                    TextColor="Green"
+                    Clicked="DoneButton_Clicked"/>
+            
+            <Label Grid.Row="1"
+                   Grid.ColumnSpan="5"
+                   Margin="0, 0, 0, 20"
+                   HorizontalOptions="Center"
+                   FontSize="Small"
+                   TextColor="Fuchsia"
+                   Text="playing against my mobile"/>
+            
+            <!-- Button Line1     -->
+            <Button Grid.Row="2"
+                    Grid.Column="0"
+                    x:Name="button1"
+                    BackgroundColor="White"
+                    AutomationId="button1"
+                    Clicked="PlayButton_Clicked">
+                <Button.Triggers>
+                    <EventTrigger Event="Pressed">
+                        <local:ButtonTriggerAction BackgroundColor="White"/>
+                    </EventTrigger>
+                    <EventTrigger Event="Released">
+                        <local:ButtonTriggerAction BackgroundColor="White" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            
+            <Image Grid.Row="2"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_vertical_1"/>
+
+            <Button Grid.Row="2"
+                    Grid.Column="2"
+                    BackgroundColor="White"
+                    x:Name="button2"
+                    AutomationId="button2"
+                    Clicked="PlayButton_Clicked">
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked">
+                        <local:ButtonTriggerAction BackgroundColor="White" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <Image Grid.Row="2"
+                   Grid.Column="3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_vertical_2"/>
+
+            <Button Grid.Row="2"
+                    Grid.Column="4"
+                    BackgroundColor="White"
+                    x:Name="button3"
+                    AutomationId="button3"
+                    Clicked="PlayButton_Clicked">
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked">
+                        <local:ButtonTriggerAction BackgroundColor="White" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+                    
+            <!--  Image Line  //////////// -->
+            <Image Grid.Row="3"
+                   Grid.Column="0"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_horizontal_1"/>
+            
+            <Image Grid.Row="3"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Image Grid.Row="3"
+                   Grid.Column="2"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_horizontal_2"/>
+
+            <Image Grid.Row="3"
+                   Grid.Column="3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            
+            <Image Grid.Row="3"
+                   Grid.Column="4"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_horizontal_1"/>
+
+            <!--  Button Line2 -->
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    BackgroundColor="White"
+                    x:Name="button4"
+                    AutomationId="button4"
+                    Clicked="PlayButton_Clicked">
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked">
+                        <local:ButtonTriggerAction BackgroundColor="White" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            
+            <Image Grid.Row="4"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_vertical_2"/>
+
+            <Button Grid.Row="4"
+                    Grid.Column="2"
+                    BackgroundColor="White"
+                    x:Name="button5"
+                    AutomationId="button5"
+                    Clicked="PlayButton_Clicked">
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked">
+                        <local:ButtonTriggerAction BackgroundColor="White" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <Image Grid.Row="4"
+                   Grid.Column="3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_vertical_1"/>
+
+            <Button Grid.Row="4"
+                    Grid.Column="4"
+                    BackgroundColor="White"
+                    x:Name="button6"
+                    AutomationId="button6"
+                    Clicked="PlayButton_Clicked">
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked">
+                        <local:ButtonTriggerAction BackgroundColor="White" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            
+            <!--  Image Line  //////////  -->
+            <Image Grid.Row="5"
+                   Grid.Column="0"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_horizontal_2"/>
+            
+            <Image Grid.Row="5"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+
+            <Image Grid.Row="5"
+                   Grid.Column="2"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_horizontal_1"/>
+
+            <Image Grid.Row="5"
+                   Grid.Column="3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            
+            <Image Grid.Row="5"
+                   Grid.Column="4"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_horizontal_2"/>
+
+            <!--  Button Line3 -->
+            <Button Grid.Row="6"
+                    Grid.Column="0"
+                    BackgroundColor="White"
+                    x:Name="button7"
+                    AutomationId="button7"
+                    Clicked="PlayButton_Clicked">
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked">
+                        <local:ButtonTriggerAction BackgroundColor="White" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            
+            <Image Grid.Row="6"
+                   Grid.Column="1"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_vertical_1"/>
+            
+            <Button Grid.Row="6"
+                    Grid.Column="2"
+                    BackgroundColor="White"
+                    x:Name="button8"
+                    AutomationId="button8"
+                    Clicked="PlayButton_Clicked">
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked">
+                        <local:ButtonTriggerAction BackgroundColor="White" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <Image Grid.Row="6"
+                   Grid.Column="3"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="line_vertical_2"/>
+            
+            <Button Grid.Row="6"
+                    Grid.Column="4"
+                    BackgroundColor="White"
+                    x:Name="button9"
+                    AutomationId="button9"
+                    Clicked="PlayButton_Clicked">
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked">
+                        <local:ButtonTriggerAction BackgroundColor="White" />
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            
+            <!--  Game result Label -->
+            <Label Grid.Row="7"
+                   Grid.ColumnSpan="5"
+                   FontSize="Medium"
+                   Margin="0,20,0,0"
+                   HorizontalOptions="Center"
+                   Text="You win!"
+                   x:Name="WinLabel"/>
+            
+            <!--  Game result Image -->
+            <Image Grid.Row="8"
+                   Grid.ColumnSpan="5"
+                   Margin="0,10,0,10"
+                   HorizontalOptions="Center"
+                   x:Name="WinImage"/>
+
+            <!--  Play again Button -->
+            <Button Grid.Row="9"
+                    Grid.ColumnSpan="5"
+                    Margin="0,0,0,20"
+                    FontSize="Large"
+                    Text="Play again"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="50"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    x:Name="ButtonRestart"
+                    AutomationId="ResetGame"
+                    Clicked="ResetGameButton_Clicked"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
